@@ -14,7 +14,7 @@ chromedriver.chromium.org/downloads
 
 1. selenium 설치 pip코드
 
-   pip install seleum
+   pip install selenium
 
 2. import 및 기본 코드
 
