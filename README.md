@@ -54,22 +54,8 @@ driver.quit() #브라우저 닫기
 행동을 할 수 있다.
 
 ```python
-driver.find_element_by_xpath('//\*[@id="main-area"]/div[7]/a[2]') #xpath 로 접근
-driver.find_element_by_class_name('ico_search_submit') #class 속성으로 접근
-driver.find_element_by_id('k_btn') #id 속성으로 접근
-driver.find_element_by_link_text('회원가입') #링크가 달려 있는 텍스트로 접근
-driver.find_element_by_css_selector('#account > div > a') #css 셀렉터로 접근
-driver.find_element_by_name('join') #name 속성으로 접근
-driver.find_element_by_partial_link_text('가입') #링크가 달려 있는 엘레먼트에 텍스트 일부만 적어서 해당 엘레먼트에 접근
-driver.find_element_by_tag_name('input') #태그 이름으로 접근
-
-이중으로 find_element 를 사용 할 수 있다.
-#input 태그 하위태그인 a 태그에 접근
-driver.find_element_by_tag_name('input').find_element_by_tag_name('a')
-
-    #xpath 로 접근한 엘레먼트의 안에 join 이라는 속성을 가진 tag 엘레먼트에 접근
-
-driver.find_element_by_xpath('/html/body/div[3]/form//span[2]').find_element_by_name('join')
+from selenium.webdriver.common.by import By
+driver.findElement(By.XPATH, "//input[@id='usernamereg-firstName']") #xpath 로 접근
 ```
 
 ## 4. 클릭 .click()
