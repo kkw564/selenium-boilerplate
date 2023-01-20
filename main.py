@@ -40,7 +40,7 @@ while True:
   if count > 10000:
     break
   print("count : ", count)
-  count -= 1
+  count += 1
   try:
     driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/div/div[2]/div[2]/div[2]/div[6]/div[1]/a[1]').send_keys(Keys.ENTER)
     time.sleep(0.1)
